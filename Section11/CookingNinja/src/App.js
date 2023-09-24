@@ -1,9 +1,12 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Search from './pages/search/Search';
-import Create from './pages/create/Create';
-import Home from './pages/home/Home';
-import Recipe from './pages/recipe/Recipe';
+
+// page components
 import Navbar from './components/Navbar';
+import Home from './pages/home/Home';
+import Create from './pages/create/Create';
+import Search from './pages/search/Search';
+import Recipe from './pages/recipe/Recipe';
+import ThemeSelector from './components/ThemeSelector';
 
 // styles
 import './App.css';
@@ -13,6 +16,7 @@ function App() {
     <div className='App'>
       <BrowserRouter>
         <Navbar />
+        <ThemeSelector />
         <Switch>
           <Route exact path='/'>
             <Home />
